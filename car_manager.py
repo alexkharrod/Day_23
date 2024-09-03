@@ -5,7 +5,7 @@ import random
 
 
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
-LANES = [-280, -220, -170, -120, -70, -20, 30, 80, 130, 180, 230, 280]
+LANES = [-270, -220, -170, -120, -70, -20, 30, 80, 130, 180, 230, 280]
 FLEET = []
 
 

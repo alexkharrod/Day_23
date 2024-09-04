@@ -16,9 +16,17 @@ class Player(Turtle):
         self.color("black")
         self.setheading(90)
         self.goto(STARTING_POSITION)
+        self.level = 1
+
 
     def move_turtle(self):
         self.forward(MOVE_DISTANCE)
+
+    def made_it(self):
+        self.goto(STARTING_POSITION)
+        self.showturtle()
+        self.level += 1
+        print(STARTING_POSITION)
 
     def detect_collision(self, b):
         width_threshold = 24

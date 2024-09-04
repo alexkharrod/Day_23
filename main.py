@@ -2,7 +2,7 @@
 import random
 import time
 from turtle import Screen
-from car_manager import CarManager, STARTING_MOVE_DISTANCE
+from car_manager import CarManager, STARTING_MOVE_DISTANCE, MOVE_INCREMENT
 from player import Player, STARTING_POSITION
 from scoreboard import Scoreboard
 
@@ -21,13 +21,12 @@ FLEET = []
 screen.tracer(0)
 screen.screensize(600, 600)
 screen.title("Turtle Crossing")
-
+score_board.level_up(player.level)
 
 # start game loop
 game_is_on = True
 while game_is_on:
     time.sleep = 0.01
-    score_board.level_up(player.level)
     screen.update()
 
     # randomly create cars
@@ -50,6 +49,9 @@ while game_is_on:
 #  set screen score create levels and  increase car speeds
     if player.ycor() >= 290:
         player.made_it()
+        score_board.clear()
+        score_board.level_up(player.level)
+       ### how to figure this out car_manager.move += MOVE_INCREMENT
 
 
 

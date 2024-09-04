@@ -23,7 +23,7 @@ class CarManager(Turtle):
         self.shapesize(1,2)
         self.setheading(180)
         self.move = STARTING_MOVE_DISTANCE
-        self.speed = 1
+
         self.goto(400, random.choice(LANES))
 
 

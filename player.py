@@ -26,7 +26,7 @@ class Player(Turtle):
         self.goto(STARTING_POSITION)
         self.showturtle()
         self.level += 1
-        print(STARTING_POSITION)
+
 
     def detect_collision(self, b):
         width_threshold = 24
